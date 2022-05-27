@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: simple-webapp-color-blue  # le nom du pod
+  labels:
+    app: web
+spec:
+  containers:
+  - name: web
+    image: mmumshad/simple-webapp-color
+    ports:
+      - containerPort: 8080    # c'est Port exposé par le cluster pas celui de l'exterieur
+    env:
+      - name: APP_COLOR
+        value: blue
