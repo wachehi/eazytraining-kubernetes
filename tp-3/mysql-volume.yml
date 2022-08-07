@@ -21,5 +21,7 @@ spec:
   volumes:
   - name: mysql-data 
     hostPath:
-      path: /data-volume
+    # chemin du dossier sur l'hôte
+      path: /data-volume  # volume à créer sur le hote
+    # ce champ est optionnel
       type: Directory
