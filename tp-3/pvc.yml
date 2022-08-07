@@ -1,3 +1,4 @@
+# le pvc permet de consommer une partie de pv qui vient dêtre créée
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -5,7 +6,7 @@ metadata:
    labels:
      type: local
 spec:
-  storageClassName: manuel
+  storageClassName: manuel   # ce nom doit avoir le même que pv et mode d'access doi être le même
   accessModes:
     - ReadWriteOnce
   resources: 
