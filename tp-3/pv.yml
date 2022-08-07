@@ -1,3 +1,4 @@
+# le pv permet de centraliser les volumes contrairement aux volumes locaux
 apiVersion: v1
 kind: PersistentVolume
 metadata:
@@ -11,4 +12,4 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/data-pv"
+    path: "/data-pv" # attention à ne pas creer le dossier par commande mkdir
